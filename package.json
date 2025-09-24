@@ -1,6 +1,12 @@
 {
   "name": "binglow",
   "private": true,
+  "license": "GPL-3.0",
+  "homepage": "https://binglow.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReservedKeyword/Binglow.git"
+  },
   "requiredScripts": [
     "typecheck"
   ],
