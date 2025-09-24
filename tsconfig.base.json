@@ -1,0 +1,28 @@
+{
+  "extends": ["@tsconfig/recommended", "@tsconfig/strictest"],
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "inlineSourceMap": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "stripInternal": true,
+    "target": "esnext",
+    "verbatimModuleSyntax": true,
+    "paths": {
+      "@binglow/game-service": ["./packages/game-service/src/index.ts"],
+      "@binglow/game-service/*": ["./packages/game-service/src/*"],
+      "@binglow/http/*": ["./packages/http/src/*"],
+      "@binglow/logger": ["./packages/logger/src/index.ts"],
+      "@binglow/oauth/*": ["./packages/oauth/src/*"],
+      "@binglow/prisma": ["./packages/prisma/src/index.ts"],
+      "@binglow/prisma/client": ["./packages/prisma/src/generated/client/index"],
+      "@binglow/redis": ["./packages/redis/src/index.ts"],
+      "@binglow/redis-heartbeat": ["./packages/redis-heartbeat/src/index.ts"],
+      "@binglow/rpc-service": ["./packages/rpc-service/src/index.ts"],
+      "@binglow/rpc-service/*": ["./packages/rpc-service/src/*"],
+      "@binglow/secret-store/*": ["./packages/secret-store/src/*"],
+      "@binglow/web-service/*": ["./packages/web-service/src/*"]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.docker
+.dockerignore
+.env
+.env*.local
+.git
+.vscode
+dist
+Dockerfile
+node_modules
+**/node_modules
+pnpm-debug.log

@@ -1,0 +1,37 @@
+{
+  "name": "binglow",
+  "private": true,
+  "requiredScripts": [
+    "typecheck"
+  ],
+  "scripts": {
+    "build:docker": "npm-run-all --parallel --print-label build-docker:bot-auth-service build-docker:bot-service build-docker:game-service build-docker:rpc-service build-docker:web-service",
+    "build-docker:bot-auth-service": "docker build --build-arg PNPM_SCOPE=@binglow --build-arg SERVICE_NAME=bot-auth-service --target bot-auth-service -t binglow-bot-auth-service .",
+    "build-docker:bot-service": "docker build --build-arg PNPM_SCOPE=@binglow --build-arg SERVICE_NAME=bot-service --target bot-service -t binglow-bot-service .",
+    "build-docker:game-service": "docker build --build-arg PNPM_SCOPE=@binglow --build-arg SERVICE_NAME=game-service --target game-service -t binglow-game-service .",
+    "build-docker:rpc-service": "docker build --build-arg PNPM_SCOPE=@binglow --build-arg SERVICE_NAME=rpc-service --target rpc-service -t binglow-rpc-service .",
+    "build-docker:web-service": "docker build --build-arg PNPM_SCOPE=@binglow --build-arg SERVICE_NAME=web-service --target web-service -t binglow-web-service .",
+    "dev": "npm-run-all --parallel --print-label \"dev:web\" \"dev:services\"",
+    "dev:bot-auth-service": "pnpm --filter @binglow/bot-auth-service dev",
+    "dev:bot-service": "NODE_TLS_REJECT_UNAUTHORIZED=0 pnpm --filter @binglow/bot-service dev",
+    "dev:game-service": "pnpm --filter @binglow/game-service dev",
+    "dev:rpc-service": "pnpm --filter @binglow/rpc-service dev",
+    "dev:services": "npm-run-all --parallel --print-label \"dev:bot-service\" \"dev:game-service\" \"dev:rpc-service\"",
+    "dev:web": "pnpm --filter @binglow/web-service dev",
+    "typecheck-all": "pnpm --parallel --stream typecheck"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.10",
+    "@tsconfig/strictest": "^2.0.6",
+    "@types/node": "^24.5.2",
+    "dotenv-cli": "^10.0.0",
+    "esbuild": "^0.25.10",
+    "glob": "^11.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.6.2",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "wait-on": "^9.0.1"
+  }
+}

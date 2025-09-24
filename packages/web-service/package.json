@@ -1,0 +1,42 @@
+{
+  "name": "@binglow/web-service",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:app": "NODE_ENV=production dotenv -e ../../.env next build",
+    "dev": "dotenv -e ../../.env -- next dev --experimental-https --experimental-https-cert ../../localhost.pem --experimental-https-key ../../localhost-key.pem",
+    "lint": "next lint",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.36.0",
+    "eslint-config-next": "^15.5.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.13"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "^2.10.0",
+    "@fortawesome/fontawesome-svg-core": "^7.0.1",
+    "@fortawesome/free-brands-svg-icons": "^7.0.1",
+    "@fortawesome/free-regular-svg-icons": "^7.0.1",
+    "@fortawesome/free-solid-svg-icons": "^7.0.1",
+    "@fortawesome/react-fontawesome": "^3.0.2",
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "@tailwindcss/postcss": "^4.1.13",
+    "@tanstack/react-query": "^5.90.2",
+    "@trpc/client": "^11.5.1",
+    "@trpc/react-query": "^11.5.1",
+    "next": "^15.5.4",
+    "next-auth": "^4.24.11",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-hot-toast": "^2.6.0",
+    "superjson": "^2.2.2",
+    "zod": "^4.1.11"
+  }
+}

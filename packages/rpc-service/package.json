@@ -1,0 +1,25 @@
+{
+  "name": "@binglow/rpc-service",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:app": "node ./build.mjs",
+    "dev": "NODE_ENV=development PORT=3004 dotenv -e ../../.env -- tsx --watch ./src/server.ts",
+    "start": "node ./dist/server.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.9",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3"
+  },
+  "dependencies": {
+    "@t3-oss/env-core": "^0.13.8",
+    "@trpc/server": "^11.5.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "superjson": "^2.2.2",
+    "zod": "^4.1.11"
+  }
+}

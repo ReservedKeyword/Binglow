@@ -1,0 +1,12 @@
+{
+  "name": "@binglow/redis",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "redis": "^5.8.2",
+    "zod": "^4.1.11"
+  }
+}

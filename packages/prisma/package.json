@@ -1,0 +1,17 @@
+{
+  "name": "@binglow/prisma",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "prisma generate",
+    "prisma:deploy": "prisma migrate deploy",
+    "prisma:generate": "dotenv -e ../../.env prisma generate",
+    "prisma:migrate": "dotenv -e ../../.env prisma migrate dev",
+    "prisma:migrate:reset": "dotenv -e ../../.env prisma migrate reset",
+    "prisma:studio": "dotenv -e ../../.env prisma studio"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.16.2",
+    "prisma": "^6.16.2"
+  }
+}

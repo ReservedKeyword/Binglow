@@ -1,0 +1,21 @@
+{
+  "name": "@binglow/bot-service",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:app": "node ./build.mjs",
+    "dev": "NODE_ENV=development dotenv -e ../../.env -- tsx --watch ./src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/tmi.js": "^1.8.6",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@t3-oss/env-core": "^0.13.8",
+    "@trpc/client": "^11.5.1",
+    "superjson": "^2.2.2",
+    "tmi.js": "^1.8.5",
+    "zod": "^4.1.11"
+  }
+}

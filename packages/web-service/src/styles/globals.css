@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap");
+
+.is-selected-by-user {
+  @apply scale-105 shadow-lg;
+}
+
+.is-selected-by-user .x-overlay {
+  display: flex;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 220px;
+  background-color: #111827;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -110px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  border: 1px solid #2c3a52;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.x-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.x-overlay::before,
+.x-overlay::after {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 4px;
+  background-color: rgba(239, 68, 68, 0.8);
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.x-overlay::before {
+  transform: rotate(45deg);
+}
+
+.x-overlay::after {
+  transform: rotate(-45deg);
+}

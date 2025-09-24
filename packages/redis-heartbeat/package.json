@@ -1,0 +1,9 @@
+{
+  "name": "@binglow/redis-heartbeat",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {}
+}

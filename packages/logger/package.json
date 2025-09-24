@@ -1,0 +1,11 @@
+{
+  "name": "@binglow/logger",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "tslog": "^4.9.3"
+  }
+}
